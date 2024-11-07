@@ -1,0 +1,2204 @@
+[
+  {
+    "city": "אבו סנאן",
+    "count_in_unique_points_set": "4",
+    "lat": "32.95803",
+    "lng": "35.171969"
+},
+  {
+    "city": "אביבים",
+    "count_in_unique_points_set": "37",
+    "lat": "33.089381",
+    "lng": "35.470338"
+},
+  {
+    "city": "אבירים",
+    "count_in_unique_points_set": "13",
+    "lat": "33.038086",
+    "lng": "35.286044"
+},
+  {
+    "city": "אבן מנחם",
+    "count_in_unique_points_set": "11",
+    "lat": "33.075143",
+    "lng": "35.295219"
+},
+  {
+    "city": "אבני איתן",
+    "count_in_unique_points_set": "7",
+    "lat": "32.824808",
+    "lng": "35.765777"
+},
+  {
+    "city": "אדמית",
+    "count_in_unique_points_set": "44",
+    "lat": "33.078842",
+    "lng": "35.20951"
+},
+  {
+    "city": "אודם",
+    "count_in_unique_points_set": "13",
+    "lat": "33.1933716",
+    "lng": "35.7495651"
+},
+  {
+    "city": "אור הגנוז",
+    "count_in_unique_points_set": "2",
+    "lat": "33.005183",
+    "lng": "35.446736"
+},
+  {
+    "city": "אור הנר",
+    "count_in_unique_points_set": "1",
+    "lat": "31.556197",
+    "lng": "34.602305"
+},
+  {
+    "city": "אורטל",
+    "count_in_unique_points_set": "3",
+    "lat": "33.086236",
+    "lng": "35.758661"
+},
+  {
+    "city": "אורנים",
+    "count_in_unique_points_set": "4",
+    "lat": "32.711224",
+    "lng": "35.109579"
+},
+  {
+    "city": "אושה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.796458",
+    "lng": "35.114584"
+},
+  {
+    "city": "אזור תעשייה",
+    "count_in_unique_points_set": "84",
+    "lat": "33.0529362",
+    "lng": "35.6130725"
+},
+  {
+    "city": "אזור תעשייה אכזיב מילואות",
+    "count_in_unique_points_set": "25",
+    "lat": "33.068374",
+    "lng": "35.110211"
+},
+  {
+    "city": "אזור תעשייה בני יהודה",
+    "count_in_unique_points_set": "4",
+    "lat": "32.802322",
+    "lng": "35.715587"
+},
+  {
+    "city": "אזור תעשייה בר-לב",
+    "count_in_unique_points_set": "3",
+    "lat": "32.9037416",
+    "lng": "35.1941013"
+},
+  {
+    "city": "אזור תעשייה הדרומי אשקלון",
+    "count_in_unique_points_set": "1",
+    "lat": "31.6324296",
+    "lng": "34.5564402"
+},
+  {
+    "city": "אזור תעשייה חצור הגלילית",
+    "count_in_unique_points_set": "5",
+    "lat": "32.980382",
+    "lng": "35.543548"
+},
+  {
+    "city": "אזור תעשייה יקנעם עילית",
+    "count_in_unique_points_set": "3",
+    "lat": "32.6682165",
+    "lng": "35.106361"
+},
+  {
+    "city": "אזור תעשייה צבאים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.5374241",
+    "lng": "35.494427"
+},
+  {
+    "city": "אזור תעשייה צפוני אשקלון",
+    "count_in_unique_points_set": "2",
+    "lat": "31.664701",
+    "lng": "34.59809000000001"
+},
+  {
+    "city": "אזור תעשייה קריית ביאליק",
+    "count_in_unique_points_set": "5",
+    "lat": "32.866086",
+    "lng": "35.098533"
+},
+  {
+    "city": "אזור תעשייה רמת דלתון",
+    "count_in_unique_points_set": "10",
+    "lat": "33.027853",
+    "lng": "35.47685"
+},
+  {
+    "city": "אזור תעשייה שחורת",
+    "count_in_unique_points_set": "7",
+    "lat": "29.597881",
+    "lng": "34.9718911"
+},
+  {
+    "city": "אזור תעשייה שער נעמן",
+    "count_in_unique_points_set": "5",
+    "lat": "32.893398",
+    "lng": "35.091562"
+},
+  {
+    "city": "אחיהוד",
+    "count_in_unique_points_set": "3",
+    "lat": "32.907405",
+    "lng": "35.171715"
+},
+  {
+    "city": "איבטין",
+    "count_in_unique_points_set": "3",
+    "lat": "32.759963",
+    "lng": "35.114601"
+},
+  {
+    "city": "איבים",
+    "count_in_unique_points_set": "3",
+    "lat": "31.533597",
+    "lng": "34.609697"
+},
+  {
+    "city": "איזור תעשייה מילואות צפון",
+    "count_in_unique_points_set": "20",
+    "lat": "32.882892",
+    "lng": "35.093887"
+},
+  {
+    "city": "איילת השחר",
+    "count_in_unique_points_set": "28",
+    "lat": "33.021115",
+    "lng": "35.576732"
+},
+  {
+    "city": "אילון",
+    "count_in_unique_points_set": "42",
+    "lat": "33.062526",
+    "lng": "35.219162"
+},
+  {
+    "city": "אילות",
+    "count_in_unique_points_set": "8",
+    "lat": "29.580548",
+    "lng": "34.963023"
+},
+  {
+    "city": "אילניה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.753908",
+    "lng": "35.408188"
+},
+  {
+    "city": "אילת",
+    "count_in_unique_points_set": "11",
+    "lat": "29.557669",
+    "lng": "34.951925"
+},
+  {
+    "city": "אל רום",
+    "count_in_unique_points_set": "14",
+    "lat": "33.180519",
+    "lng": "35.770095"
+},
+  {
+    "city": "אלון הגליל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.756874",
+    "lng": "35.220294"
+},
+  {
+    "city": "אלוני הבשן",
+    "count_in_unique_points_set": "4",
+    "lat": "33.044087",
+    "lng": "35.838507"
+},
+  {
+    "city": "אלי עד",
+    "count_in_unique_points_set": "7",
+    "lat": "32.806583",
+    "lng": "35.73657499999999"
+},
+  {
+    "city": "אליפלט",
+    "count_in_unique_points_set": "3",
+    "lat": "32.947834",
+    "lng": "35.548516"
+},
+  {
+    "city": "אליקים",
+    "count_in_unique_points_set": "5",
+    "lat": "32.633345",
+    "lng": "35.067613"
+},
+  {
+    "city": "אלמגור",
+    "count_in_unique_points_set": "4",
+    "lat": "32.912709",
+    "lng": "35.60231"
+},
+  {
+    "city": "אלקוש",
+    "count_in_unique_points_set": "14",
+    "lat": "33.034294",
+    "lng": "35.326348"
+},
+  {
+    "city": "אמנון",
+    "count_in_unique_points_set": "4",
+    "lat": "32.904989",
+    "lng": "35.571136"
+},
+  {
+    "city": "אמץ",
+    "count_in_unique_points_set": "1",
+    "lat": "32.369216",
+    "lng": "34.993129"
+},
+  {
+    "city": "אניעם",
+    "count_in_unique_points_set": "2",
+    "lat": "32.956638",
+    "lng": "35.739718"
+},
+  {
+    "city": "אעבלין",
+    "count_in_unique_points_set": "1",
+    "lat": "32.8213416",
+    "lng": "35.195795"
+},
+  {
+    "city": "אפיק",
+    "count_in_unique_points_set": "5",
+    "lat": "32.779428",
+    "lng": "35.702994"
+},
+  {
+    "city": "אפק",
+    "count_in_unique_points_set": "3",
+    "lat": "32.838316",
+    "lng": "35.12778"
+},
+  {
+    "city": "ארבל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.812247",
+    "lng": "35.486453"
+},
+  {
+    "city": "ארז",
+    "count_in_unique_points_set": "1",
+    "lat": "31.55984",
+    "lng": "34.564889"
+},
+  {
+    "city": "אשרת",
+    "count_in_unique_points_set": "2",
+    "lat": "32.971645",
+    "lng": "35.1557"
+},
+  {
+    "city": "באר אורה",
+    "count_in_unique_points_set": "1",
+    "lat": "29.710166",
+    "lng": "34.987218"
+},
+  {
+    "city": "באר גנים",
+    "count_in_unique_points_set": "1",
+    "lat": "31.7003539",
+    "lng": "34.610934"
+},
+  {
+    "city": "בארותיים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.321039",
+    "lng": "34.98343"
+},
+  {
+    "city": "בוסתן הגליל",
+    "count_in_unique_points_set": "12",
+    "lat": "32.948636",
+    "lng": "35.08068799999999"
+},
+  {
+    "city": "בוקעתא",
+    "count_in_unique_points_set": "13",
+    "lat": "33.2026572",
+    "lng": "35.7767723"
+},
+  {
+    "city": "ביר אלמכסור",
+    "count_in_unique_points_set": "1",
+    "lat": "32.7781997",
+    "lng": "35.2216895"
+},
+  {
+    "city": "ביריה",
+    "count_in_unique_points_set": "8",
+    "lat": "32.978108",
+    "lng": "35.503096"
+},
+  {
+    "city": "בית אלפא וחפציבה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.518729",
+    "lng": "35.426247"
+},
+  {
+    "city": "בית ג'אן",
+    "count_in_unique_points_set": "2",
+    "lat": "32.9651552",
+    "lng": "35.37935360000001"
+},
+  {
+    "city": "בית הלל",
+    "count_in_unique_points_set": "108",
+    "lat": "33.208782",
+    "lng": "35.606515"
+},
+  {
+    "city": "בית העלמין החדש נהריה",
+    "count_in_unique_points_set": "1",
+    "lat": "33.0048929",
+    "lng": "35.1469885"
+},
+  {
+    "city": "בית העלמין החדש עכו",
+    "count_in_unique_points_set": "3",
+    "lat": "32.9149982",
+    "lng": "35.1354729"
+},
+  {
+    "city": "בית העמק",
+    "count_in_unique_points_set": "5",
+    "lat": "32.971014",
+    "lng": "35.145305"
+},
+  {
+    "city": "בית השיטה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.550874",
+    "lng": "35.43935099999999"
+},
+  {
+    "city": "בית זייד",
+    "count_in_unique_points_set": "5",
+    "lat": "32.702414",
+    "lng": "35.131109"
+},
+  {
+    "city": "בית יוסף",
+    "count_in_unique_points_set": "1",
+    "lat": "32.558698",
+    "lng": "35.55277299999999"
+},
+  {
+    "city": "בית סוהר קישון",
+    "count_in_unique_points_set": "2",
+    "lat": "32.7269133",
+    "lng": "35.0918998"
+},
+  {
+    "city": "בית ספר אורט בנימינה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.546158",
+    "lng": "34.95623399999999"
+},
+  {
+    "city": "בית ספר שדה מירון",
+    "count_in_unique_points_set": "9",
+    "lat": "33.0114872",
+    "lng": "35.3922459"
+},
+  {
+    "city": "בית שאן",
+    "count_in_unique_points_set": "2",
+    "lat": "32.497103",
+    "lng": "35.497336"
+},
+  {
+    "city": "בן עמי",
+    "count_in_unique_points_set": "16",
+    "lat": "33.005369",
+    "lng": "35.122218"
+},
+  {
+    "city": "בני יהודה וגבעת יואב",
+    "count_in_unique_points_set": "6",
+    "lat": "32.798262",
+    "lng": "35.69107"
+},
+  {
+    "city": "בני נצרים",
+    "count_in_unique_points_set": "1",
+    "lat": "31.143513",
+    "lng": "34.316403"
+},
+  {
+    "city": "בנימינה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.517078",
+    "lng": "34.955096"
+},
+  {
+    "city": "בצת",
+    "count_in_unique_points_set": "45",
+    "lat": "33.070047",
+    "lng": "35.132636"
+},
+  {
+    "city": "בר יוחאי",
+    "count_in_unique_points_set": "2",
+    "lat": "32.997704",
+    "lng": "35.44819"
+},
+  {
+    "city": "ברכיה",
+    "count_in_unique_points_set": "1",
+    "lat": "31.66804699999999",
+    "lng": "34.624296"
+},
+  {
+    "city": "ברעם",
+    "count_in_unique_points_set": "34",
+    "lat": "33.058979",
+    "lng": "35.433235"
+},
+  {
+    "city": "ברקאי",
+    "count_in_unique_points_set": "1",
+    "lat": "32.476096",
+    "lng": "35.031044"
+},
+  {
+    "city": "בת חפר",
+    "count_in_unique_points_set": "1",
+    "lat": "32.333714",
+    "lng": "35.013729"
+},
+  {
+    "city": "בת ים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.0151439",
+    "lng": "34.752885"
+},
+  {
+    "city": "בת שלמה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.600335",
+    "lng": "35.003837"
+},
+  {
+    "city": "ג'דידה מכר",
+    "count_in_unique_points_set": "10",
+    "lat": "32.928656",
+    "lng": "35.150573"
+},
+  {
+    "city": "ג'וליס",
+    "count_in_unique_points_set": "1",
+    "lat": "32.94498",
+    "lng": "35.184243"
+},
+  {
+    "city": "גבים",
+    "count_in_unique_points_set": "2",
+    "lat": "31.506273",
+    "lng": "34.598949"
+},
+  {
+    "city": "גבעת חן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.16758",
+    "lng": "34.875514"
+},
+  {
+    "city": "גברעם",
+    "count_in_unique_points_set": "1",
+    "lat": "31.591461",
+    "lng": "34.612156"
+},
+  {
+    "city": "גדות",
+    "count_in_unique_points_set": "16",
+    "lat": "33.018208",
+    "lng": "35.619547"
+},
+  {
+    "city": "גונן",
+    "count_in_unique_points_set": "38",
+    "lat": "33.1240353",
+    "lng": "35.6461519"
+},
+  {
+    "city": "גורן",
+    "count_in_unique_points_set": "41",
+    "lat": "33.055566",
+    "lng": "35.233619"
+},
+  {
+    "city": "גורנות הגליל",
+    "count_in_unique_points_set": "41",
+    "lat": "33.059286",
+    "lng": "35.24967"
+},
+  {
+    "city": "גוש חלב",
+    "count_in_unique_points_set": "31",
+    "lat": "33.021266",
+    "lng": "35.447949"
+},
+  {
+    "city": "גינוסר",
+    "count_in_unique_points_set": "1",
+    "lat": "32.848666",
+    "lng": "35.523152"
+},
+  {
+    "city": "גלעד",
+    "count_in_unique_points_set": "104",
+    "lat": "32.558075",
+    "lng": "35.076559"
+},
+  {
+    "city": "גן יאשיה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.349487",
+    "lng": "34.996245"
+},
+  {
+    "city": "גן שמואל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.452911",
+    "lng": "34.949311"
+},
+  {
+    "city": "גני חוגה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.5186111",
+    "lng": "35.5352778"
+},
+  {
+    "city": "געתון",
+    "count_in_unique_points_set": "10",
+    "lat": "33.006075",
+    "lng": "35.213831"
+},
+  {
+    "city": "גשור",
+    "count_in_unique_points_set": "4",
+    "lat": "32.819941",
+    "lng": "35.715708"
+},
+  {
+    "city": "גשר",
+    "count_in_unique_points_set": "27",
+    "lat": "32.621205",
+    "lng": "35.550376"
+},
+  {
+    "city": "גשר הזיו",
+    "count_in_unique_points_set": "25",
+    "lat": "33.040532",
+    "lng": "35.110563"
+},
+  {
+    "city": "דוב''ב",
+    "count_in_unique_points_set": "14",
+    "lat": "33.0508",
+    "lng": "35.407747"
+},
+  {
+    "city": "דיר חנא",
+    "count_in_unique_points_set": "1",
+    "lat": "32.8622818",
+    "lng": "35.3662265"
+},
+  {
+    "city": "דישון",
+    "count_in_unique_points_set": "88",
+    "lat": "33.082318",
+    "lng": "35.517572"
+},
+  {
+    "city": "דלית אל כרמל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.6934814",
+    "lng": "35.0470183"
+},
+  {
+    "city": "דלתון",
+    "count_in_unique_points_set": "19",
+    "lat": "33.016553",
+    "lng": "35.489911"
+},
+  {
+    "city": "דפנה",
+    "count_in_unique_points_set": "69",
+    "lat": "33.23075",
+    "lng": "35.638268"
+},
+  {
+    "city": "האון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.726748",
+    "lng": "35.622665"
+},
+  {
+    "city": "הגושרים",
+    "count_in_unique_points_set": "71",
+    "lat": "33.221485",
+    "lng": "35.623028"
+},
+  {
+    "city": "הדר ועיר תחתית",
+    "count_in_unique_points_set": "1",
+    "lat": "32.817137",
+    "lng": "35.001788"
+},
+  {
+    "city": "הוד השרון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.149961",
+    "lng": "34.8838788"
+},
+  {
+    "city": "הודיה",
+    "count_in_unique_points_set": "1",
+    "lat": "31.676356",
+    "lng": "34.639275"
+},
+  {
+    "city": "הילה",
+    "count_in_unique_points_set": "10",
+    "lat": "33.036175",
+    "lng": "35.244582"
+},
+  {
+    "city": "המכללה האקדמית כנרת",
+    "count_in_unique_points_set": "1",
+    "lat": "32.7053927",
+    "lng": "35.590984"
+},
+  {
+    "city": "הסוללים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.751802",
+    "lng": "35.238022"
+},
+  {
+    "city": "הר הנגב",
+    "count_in_unique_points_set": "1",
+    "lat": "30.502778",
+    "lng": "34.639167"
+},
+  {
+    "city": "הר-חלוץ",
+    "count_in_unique_points_set": "1",
+    "lat": "32.95055",
+    "lng": "35.312278"
+},
+  {
+    "city": "ואדי אל חמאם",
+    "count_in_unique_points_set": "1",
+    "lat": "32.828399",
+    "lng": "35.491721"
+},
+  {
+    "city": "זכרון יעקב",
+    "count_in_unique_points_set": "2",
+    "lat": "32.5739532",
+    "lng": "34.9520929"
+},
+  {
+    "city": "זרעית",
+    "count_in_unique_points_set": "11",
+    "lat": "33.09898500000001",
+    "lng": "35.288522"
+},
+  {
+    "city": "חוות אירוח גורן",
+    "count_in_unique_points_set": "2",
+    "lat": "33.055566",
+    "lng": "35.233619"
+},
+  {
+    "city": "חוות עדן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.465804",
+    "lng": "35.486637"
+},
+  {
+    "city": "חולית",
+    "count_in_unique_points_set": "1",
+    "lat": "31.230563",
+    "lng": "34.32734"
+},
+  {
+    "city": "חולתה",
+    "count_in_unique_points_set": "15",
+    "lat": "33.052851",
+    "lng": "35.609244"
+},
+  {
+    "city": "חוסן",
+    "count_in_unique_points_set": "8",
+    "lat": "32.997699",
+    "lng": "35.298723"
+},
+  {
+    "city": "חוף אמנון",
+    "count_in_unique_points_set": "3",
+    "lat": "32.8911709",
+    "lng": "35.5934816"
+},
+  {
+    "city": "חוף בצת",
+    "count_in_unique_points_set": "13",
+    "lat": "33.0805118",
+    "lng": "35.105903"
+},
+  {
+    "city": "חורפיש",
+    "count_in_unique_points_set": "8",
+    "lat": "33.016688",
+    "lng": "35.347106"
+},
+  {
+    "city": "חמדיה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.519773",
+    "lng": "35.520568"
+},
+  {
+    "city": "חמת גדר",
+    "count_in_unique_points_set": "6",
+    "lat": "32.6833586",
+    "lng": "35.6647332"
+},
+  {
+    "city": "חניתה",
+    "count_in_unique_points_set": "53",
+    "lat": "33.087634",
+    "lng": "35.17343"
+},
+  {
+    "city": "חנתון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.783051",
+    "lng": "35.245063"
+},
+  {
+    "city": "חספין",
+    "count_in_unique_points_set": "7",
+    "lat": "32.8456305",
+    "lng": "35.7929907"
+},
+  {
+    "city": "חצור הגלילית",
+    "count_in_unique_points_set": "6",
+    "lat": "32.980382",
+    "lng": "35.543548"
+},
+  {
+    "city": "חריש",
+    "count_in_unique_points_set": "1",
+    "lat": "32.4606442",
+    "lng": "35.0478887"
+},
+  {
+    "city": "חרשים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.957737",
+    "lng": "35.328217"
+},
+  {
+    "city": "טבחה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.872222",
+    "lng": "35.55"
+},
+  {
+    "city": "טבריה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.795859",
+    "lng": "35.530973"
+},
+  {
+    "city": "טורעאן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.776688",
+    "lng": "35.3746247"
+},
+  {
+    "city": "טירת צבי",
+    "count_in_unique_points_set": "1",
+    "lat": "32.422486",
+    "lng": "35.52832"
+},
+  {
+    "city": "טמרה בגלבוע",
+    "count_in_unique_points_set": "1",
+    "lat": "32.634918",
+    "lng": "35.402699"
+},
+  {
+    "city": "יגור",
+    "count_in_unique_points_set": "2",
+    "lat": "32.741532",
+    "lng": "35.076826"
+},
+  {
+    "city": "יד חנה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.325311",
+    "lng": "35.006692"
+},
+  {
+    "city": "יונתן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.93966",
+    "lng": "35.795468"
+},
+  {
+    "city": "יחיעם",
+    "count_in_unique_points_set": "9",
+    "lat": "32.996109",
+    "lng": "35.22109100000001"
+},
+  {
+    "city": "יסוד המעלה",
+    "count_in_unique_points_set": "17",
+    "lat": "33.05358",
+    "lng": "35.589013"
+},
+  {
+    "city": "יסעור",
+    "count_in_unique_points_set": "1",
+    "lat": "32.901145",
+    "lng": "35.166641"
+},
+  {
+    "city": "יערה",
+    "count_in_unique_points_set": "50",
+    "lat": "33.068013",
+    "lng": "35.18608"
+},
+  {
+    "city": "יפתח",
+    "count_in_unique_points_set": "85",
+    "lat": "33.128346",
+    "lng": "35.55202999999999"
+},
+  {
+    "city": "יקנעם המושבה והזורע",
+    "count_in_unique_points_set": "2",
+    "lat": "32.654217",
+    "lng": "35.116758"
+},
+  {
+    "city": "יקנעם עילית",
+    "count_in_unique_points_set": "4",
+    "lat": "32.660225",
+    "lng": "35.104606"
+},
+  {
+    "city": "יראון",
+    "count_in_unique_points_set": "38",
+    "lat": "33.077239",
+    "lng": "35.454291"
+},
+  {
+    "city": "ירדנה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.565357",
+    "lng": "35.565978"
+},
+  {
+    "city": "ירכא",
+    "count_in_unique_points_set": "2",
+    "lat": "32.953492",
+    "lng": "35.21199"
+},
+  {
+    "city": "כברי",
+    "count_in_unique_points_set": "14",
+    "lat": "33.020985",
+    "lng": "35.147007"
+},
+  {
+    "city": "כורזים ורד הגליל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.90416",
+    "lng": "35.550785"
+},
+  {
+    "city": "כושי רמון",
+    "count_in_unique_points_set": "1",
+    "lat": "30.306825",
+    "lng": "35.13523142"
+},
+  {
+    "city": "כיסופים",
+    "count_in_unique_points_set": "1",
+    "lat": "31.374545",
+    "lng": "34.398992"
+},
+  {
+    "city": "כליל",
+    "count_in_unique_points_set": "2",
+    "lat": "32.983567",
+    "lng": "35.199672"
+},
+  {
+    "city": "כפר ביאליק",
+    "count_in_unique_points_set": "8",
+    "lat": "32.8220488",
+    "lng": "35.0871929"
+},
+  {
+    "city": "כפר בלום",
+    "count_in_unique_points_set": "43",
+    "lat": "33.172527",
+    "lng": "35.607938"
+},
+  {
+    "city": "כפר ברוך",
+    "count_in_unique_points_set": "1",
+    "lat": "32.646048",
+    "lng": "35.193078"
+},
+  {
+    "city": "כפר גלעדי",
+    "count_in_unique_points_set": "103",
+    "lat": "33.242078",
+    "lng": "35.574142"
+},
+  {
+    "city": "כפר גמילה מלכישוע",
+    "count_in_unique_points_set": "1",
+    "lat": "32.438568",
+    "lng": "35.412757"
+},
+  {
+    "city": "כפר המכבי",
+    "count_in_unique_points_set": "3",
+    "lat": "32.791804",
+    "lng": "35.114793"
+},
+  {
+    "city": "כפר הנשיא",
+    "count_in_unique_points_set": "2",
+    "lat": "32.97466",
+    "lng": "35.602308"
+},
+  {
+    "city": "כפר ורדים",
+    "count_in_unique_points_set": "7",
+    "lat": "32.9969981",
+    "lng": "35.2628012"
+},
+  {
+    "city": "כפר חושן",
+    "count_in_unique_points_set": "4",
+    "lat": "33.013123",
+    "lng": "35.440171"
+},
+  {
+    "city": "כפר חסידים",
+    "count_in_unique_points_set": "4",
+    "lat": "32.752262",
+    "lng": "35.094212"
+},
+  {
+    "city": "כפר חרוב",
+    "count_in_unique_points_set": "4",
+    "lat": "32.762357",
+    "lng": "35.66418"
+},
+  {
+    "city": "כפר יאסיף",
+    "count_in_unique_points_set": "2",
+    "lat": "32.9520318",
+    "lng": "35.1599957"
+},
+  {
+    "city": "כפר יהושע",
+    "count_in_unique_points_set": "2",
+    "lat": "32.680966",
+    "lng": "35.1515478"
+},
+  {
+    "city": "כפר יובל",
+    "count_in_unique_points_set": "107",
+    "lat": "33.246577",
+    "lng": "35.597063"
+},
+  {
+    "city": "כפר מנדא",
+    "count_in_unique_points_set": "1",
+    "lat": "32.809649",
+    "lng": "35.2624051"
+},
+  {
+    "city": "כפר מסריק",
+    "count_in_unique_points_set": "7",
+    "lat": "32.891218",
+    "lng": "35.098414"
+},
+  {
+    "city": "כפר נהר הירדן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.768294",
+    "lng": "35.435627"
+},
+  {
+    "city": "כפר נחום",
+    "count_in_unique_points_set": "3",
+    "lat": "32.88033",
+    "lng": "35.573307"
+},
+  {
+    "city": "כפר סאלד",
+    "count_in_unique_points_set": "42",
+    "lat": "33.196035",
+    "lng": "35.657993"
+},
+  {
+    "city": "כפר סילבר",
+    "count_in_unique_points_set": "1",
+    "lat": "31.675669",
+    "lng": "34.612311"
+},
+  {
+    "city": "כפר קרע",
+    "count_in_unique_points_set": "1",
+    "lat": "32.505255",
+    "lng": "35.048811"
+},
+  {
+    "city": "כפר רופין",
+    "count_in_unique_points_set": "1",
+    "lat": "32.457549",
+    "lng": "35.555673"
+},
+  {
+    "city": "כפר שמריהו",
+    "count_in_unique_points_set": "1",
+    "lat": "32.187123",
+    "lng": "34.823124"
+},
+  {
+    "city": "כפר תקווה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.701338",
+    "lng": "35.11503500000001"
+},
+  {
+    "city": "כרכום",
+    "count_in_unique_points_set": "2",
+    "lat": "32.928271",
+    "lng": "35.606331"
+},
+  {
+    "city": "כרם בן זמרה",
+    "count_in_unique_points_set": "20",
+    "lat": "33.039224",
+    "lng": "35.46988899999999"
+},
+  {
+    "city": "כרמיאל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.9085935",
+    "lng": "35.2932814"
+},
+  {
+    "city": "כרמל",
+    "count_in_unique_points_set": "2",
+    "lat": "32.793916",
+    "lng": "34.996161"
+},
+  {
+    "city": "לב החולה",
+    "count_in_unique_points_set": "7",
+    "lat": "33.103333",
+    "lng": "35.609167"
+},
+  {
+    "city": "לבון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.94118",
+    "lng": "35.286475"
+},
+  {
+    "city": "לבנים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.86379",
+    "lng": "35.497479"
+},
+  {
+    "city": "להבות הבשן",
+    "count_in_unique_points_set": "39",
+    "lat": "33.1412178",
+    "lng": "35.6478714"
+},
+  {
+    "city": "לוחמי הגטאות",
+    "count_in_unique_points_set": "16",
+    "lat": "32.962661",
+    "lng": "35.096741"
+},
+  {
+    "city": "לימן",
+    "count_in_unique_points_set": "43",
+    "lat": "33.058732",
+    "lng": "35.111815"
+},
+  {
+    "city": "מאור",
+    "count_in_unique_points_set": "2",
+    "lat": "32.425832",
+    "lng": "35.005289"
+},
+  {
+    "city": "מאיר שפיה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.591052",
+    "lng": "34.97099237"
+},
+  {
+    "city": "מבוא חמה",
+    "count_in_unique_points_set": "4",
+    "lat": "32.736701",
+    "lng": "35.655207"
+},
+  {
+    "city": "מג'דל כרום",
+    "count_in_unique_points_set": "1",
+    "lat": "32.920132",
+    "lng": "35.25665"
+},
+  {
+    "city": "מג'דל שמס",
+    "count_in_unique_points_set": "18",
+    "lat": "33.2690961",
+    "lng": "35.772122"
+},
+  {
+    "city": "מגדים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.7266265",
+    "lng": "34.9621003"
+},
+  {
+    "city": "מגדל",
+    "count_in_unique_points_set": "1",
+    "lat": "32.839494",
+    "lng": "35.499849"
+},
+  {
+    "city": "מולדת",
+    "count_in_unique_points_set": "1",
+    "lat": "32.586196",
+    "lng": "35.438941"
+},
+  {
+    "city": "מזרעה",
+    "count_in_unique_points_set": "14",
+    "lat": "32.983652",
+    "lng": "35.098934"
+},
+  {
+    "city": "מחולה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.365285",
+    "lng": "35.51602"
+},
+  {
+    "city": "מחניים",
+    "count_in_unique_points_set": "3",
+    "lat": "32.988845",
+    "lng": "35.570375"
+},
+  {
+    "city": "מטווח ניר עם",
+    "count_in_unique_points_set": "2",
+    "lat": "31.5123126",
+    "lng": "34.5545017"
+},
+  {
+    "city": "מטולה",
+    "count_in_unique_points_set": "105",
+    "lat": "33.277232",
+    "lng": "35.578235"
+},
+  {
+    "city": "מיצר",
+    "count_in_unique_points_set": "8",
+    "lat": "32.440186",
+    "lng": "35.047702"
+},
+  {
+    "city": "מירב",
+    "count_in_unique_points_set": "1",
+    "lat": "32.452041",
+    "lng": "35.422479"
+},
+  {
+    "city": "מירון",
+    "count_in_unique_points_set": "11",
+    "lat": "32.985226",
+    "lng": "35.441643"
+},
+  {
+    "city": "מכללת ספיר",
+    "count_in_unique_points_set": "2",
+    "lat": "31.5090643",
+    "lng": "34.5944391"
+},
+  {
+    "city": "מלון אחוזת ירדן",
+    "count_in_unique_points_set": "2",
+    "lat": "33.0441711",
+    "lng": "35.5731678"
+},
+  {
+    "city": "מלון פרא",
+    "count_in_unique_points_set": "1",
+    "lat": "33.0075",
+    "lng": "35.6050"
+},
+  {
+    "city": "מלכיה",
+    "count_in_unique_points_set": "84",
+    "lat": "33.098589",
+    "lng": "35.509624"
+},
+  {
+    "city": "מנות",
+    "count_in_unique_points_set": "18",
+    "lat": "33.038709",
+    "lng": "35.195156"
+},
+  {
+    "city": "מנחמיה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.66318529999999",
+    "lng": "35.555195"
+},
+  {
+    "city": "מנחת מחניים",
+    "count_in_unique_points_set": "2",
+    "lat": "32.988845",
+    "lng": "35.570375"
+},
+  {
+    "city": "מנרה",
+    "count_in_unique_points_set": "101",
+    "lat": "33.195375",
+    "lng": "35.543728"
+},
+  {
+    "city": "מסילות",
+    "count_in_unique_points_set": "1",
+    "lat": "32.497362",
+    "lng": "35.474651"
+},
+  {
+    "city": "מסעדה",
+    "count_in_unique_points_set": "19",
+    "lat": "33.2321159",
+    "lng": "35.7555991"
+},
+  {
+    "city": "מע'אר",
+    "count_in_unique_points_set": "1",
+    "lat": "32.8872843",
+    "lng": "35.4091765"
+},
+  {
+    "city": "מעוז חיים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.49407",
+    "lng": "35.550767"
+},
+  {
+    "city": "מעונה",
+    "count_in_unique_points_set": "10",
+    "lat": "33.016894",
+    "lng": "35.263626"
+},
+  {
+    "city": "מעיין ברוך",
+    "count_in_unique_points_set": "106",
+    "lat": "33.239349",
+    "lng": "35.609359"
+},
+  {
+    "city": "מעיין צבי",
+    "count_in_unique_points_set": "1",
+    "lat": "32.568484",
+    "lng": "34.940623"
+},
+  {
+    "city": "מעיליא",
+    "count_in_unique_points_set": "10",
+    "lat": "33.027194",
+    "lng": "35.256304"
+},
+  {
+    "city": "מעלה גלבוע",
+    "count_in_unique_points_set": "1",
+    "lat": "32.476065",
+    "lng": "35.420637"
+},
+  {
+    "city": "מעלות תרשיחא",
+    "count_in_unique_points_set": "9",
+    "lat": "33.0148018",
+    "lng": "35.2768101"
+},
+  {
+    "city": "מפלסים",
+    "count_in_unique_points_set": "1",
+    "lat": "31.50220599999999",
+    "lng": "34.561674"
+},
+  {
+    "city": "מפרץ",
+    "count_in_unique_points_set": "10",
+    "lat": "32.902581",
+    "lng": "35.09303999999999"
+},
+  {
+    "city": "מצובה",
+    "count_in_unique_points_set": "40",
+    "lat": "33.062312",
+    "lng": "35.155705"
+},
+  {
+    "city": "מרגליות",
+    "count_in_unique_points_set": "103",
+    "lat": "33.216474",
+    "lng": "35.544354"
+},
+  {
+    "city": "מרום גולן",
+    "count_in_unique_points_set": "9",
+    "lat": "33.132583",
+    "lng": "35.77707100000001"
+},
+  {
+    "city": "מרכז אזורי מבואות חרמון",
+    "count_in_unique_points_set": "85",
+    "lat": "33.000651",
+    "lng": "35.438202"
+},
+  {
+    "city": "מרכז אזורי מרום גליל",
+    "count_in_unique_points_set": "1",
+    "lat": "33.000651",
+    "lng": "35.438202"
+},
+  {
+    "city": "מרכז וגליל ים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.158797",
+    "lng": "34.831876"
+},
+  {
+    "city": "משגב עם",
+    "count_in_unique_points_set": "101",
+    "lat": "33.247572",
+    "lng": "35.548499"
+},
+  {
+    "city": "משמר הירדן",
+    "count_in_unique_points_set": "14",
+    "lat": "33.003484",
+    "lng": "35.598271"
+},
+  {
+    "city": "משען",
+    "count_in_unique_points_set": "1",
+    "lat": "31.656885",
+    "lng": "34.621607"
+},
+  {
+    "city": "מתת",
+    "count_in_unique_points_set": "14",
+    "lat": "33.041684",
+    "lng": "35.35669499999999"
+},
+  {
+    "city": "נאות גולן",
+    "count_in_unique_points_set": "6",
+    "lat": "32.787026",
+    "lng": "35.693172"
+},
+  {
+    "city": "נאות מרדכי",
+    "count_in_unique_points_set": "41",
+    "lat": "33.159785",
+    "lng": "35.595602"
+},
+  {
+    "city": "נאעורה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.61468",
+    "lng": "35.391133"
+},
+  {
+    "city": "נהלל",
+    "count_in_unique_points_set": "2",
+    "lat": "32.6903009",
+    "lng": "35.1964717"
+},
+  {
+    "city": "נהריה",
+    "count_in_unique_points_set": "33",
+    "lat": "33.0085361",
+    "lng": "35.0980514"
+},
+  {
+    "city": "נוב",
+    "count_in_unique_points_set": "8",
+    "lat": "32.832852",
+    "lng": "35.783574"
+},
+  {
+    "city": "נוה איתן",
+    "count_in_unique_points_set": "1",
+    "lat": "32.492304",
+    "lng": "35.533119"
+},
+  {
+    "city": "נווה אור",
+    "count_in_unique_points_set": "1",
+    "lat": "32.589025",
+    "lng": "35.554544"
+},
+  {
+    "city": "נווה אטי''ב",
+    "count_in_unique_points_set": "18",
+    "lat": "33.26202",
+    "lng": "35.740574"
+},
+  {
+    "city": "נווה זיו",
+    "count_in_unique_points_set": "21",
+    "lat": "33.027399",
+    "lng": "35.18433"
+},
+  {
+    "city": "נווה ים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.679769",
+    "lng": "34.93188"
+},
+  {
+    "city": "נוף כנרת",
+    "count_in_unique_points_set": "1",
+    "lat": "32.786437",
+    "lng": "35.524158"
+},
+  {
+    "city": "נחל עוז",
+    "count_in_unique_points_set": "3",
+    "lat": "31.47267999999999",
+    "lng": "34.497675"
+},
+  {
+    "city": "נחף",
+    "count_in_unique_points_set": "1",
+    "lat": "32.9350929",
+    "lng": "35.3156595"
+},
+  {
+    "city": "נטועה",
+    "count_in_unique_points_set": "13",
+    "lat": "33.065387",
+    "lng": "35.323406"
+},
+  {
+    "city": "נטור",
+    "count_in_unique_points_set": "4",
+    "lat": "32.854068",
+    "lng": "35.752574"
+},
+  {
+    "city": "נין",
+    "count_in_unique_points_set": "1",
+    "lat": "32.630986",
+    "lng": "35.349399"
+},
+  {
+    "city": "ניר דוד",
+    "count_in_unique_points_set": "1",
+    "lat": "32.504062",
+    "lng": "35.457622"
+},
+  {
+    "city": "ניר יצחק",
+    "count_in_unique_points_set": "1",
+    "lat": "31.23604",
+    "lng": "34.356702"
+},
+  {
+    "city": "ניר ישראל",
+    "count_in_unique_points_set": "1",
+    "lat": "31.692156",
+    "lng": "34.638071"
+},
+  {
+    "city": "ניר עוז",
+    "count_in_unique_points_set": "2",
+    "lat": "31.309697",
+    "lng": "34.402075"
+},
+  {
+    "city": "ניר עם",
+    "count_in_unique_points_set": "3",
+    "lat": "31.518459",
+    "lng": "34.580544"
+},
+  {
+    "city": "נמרוד",
+    "count_in_unique_points_set": "17",
+    "lat": "33.244978",
+    "lng": "35.750842"
+},
+  {
+    "city": "נס עמים",
+    "count_in_unique_points_set": "9",
+    "lat": "32.965465",
+    "lng": "35.121588"
+},
+  {
+    "city": "נשר",
+    "count_in_unique_points_set": "2",
+    "lat": "32.7721793",
+    "lng": "35.045039"
+},
+  {
+    "city": "נתיב השיירה",
+    "count_in_unique_points_set": "5",
+    "lat": "32.991185",
+    "lng": "35.130745"
+},
+  {
+    "city": "סאג'ור",
+    "count_in_unique_points_set": "1",
+    "lat": "32.9428596",
+    "lng": "35.3417247"
+},
+  {
+    "city": "סאסא",
+    "count_in_unique_points_set": "14",
+    "lat": "33.02866",
+    "lng": "35.394569"
+},
+  {
+    "city": "סופה",
+    "count_in_unique_points_set": "1",
+    "lat": "31.238309",
+    "lng": "34.341987"
+},
+  {
+    "city": "סער",
+    "count_in_unique_points_set": "24",
+    "lat": "33.028689",
+    "lng": "35.109232"
+},
+  {
+    "city": "ספיר",
+    "count_in_unique_points_set": "4",
+    "lat": "30.613623",
+    "lng": "35.184144"
+},
+  {
+    "city": "ע'ג'ר",
+    "count_in_unique_points_set": "66",
+    "lat": "33.272607",
+    "lng": "35.623637"
+},
+  {
+    "city": "עבדון",
+    "count_in_unique_points_set": "21",
+    "lat": "33.048792",
+    "lng": "35.179128"
+},
+  {
+    "city": "עברון",
+    "count_in_unique_points_set": "17",
+    "lat": "32.991149",
+    "lng": "35.100031"
+},
+  {
+    "city": "עולש",
+    "count_in_unique_points_set": "1",
+    "lat": "32.331969",
+    "lng": "34.98532100000001"
+},
+  {
+    "city": "עין אל אסד",
+    "count_in_unique_points_set": "1",
+    "lat": "32.940754",
+    "lng": "35.401027"
+},
+  {
+    "city": "עין גב",
+    "count_in_unique_points_set": "1",
+    "lat": "32.783393",
+    "lng": "35.640119"
+},
+  {
+    "city": "עין הבשור",
+    "count_in_unique_points_set": "1",
+    "lat": "31.280895",
+    "lng": "34.443446"
+},
+  {
+    "city": "עין המפרץ",
+    "count_in_unique_points_set": "2",
+    "lat": "32.902581",
+    "lng": "35.09303999999999"
+},
+  {
+    "city": "עין הנצי''ב",
+    "count_in_unique_points_set": "1",
+    "lat": "32.47071",
+    "lng": "35.501973"
+},
+  {
+    "city": "עין העמק",
+    "count_in_unique_points_set": "2",
+    "lat": "32.629664",
+    "lng": "35.082246"
+},
+  {
+    "city": "עין השופט",
+    "count_in_unique_points_set": "1",
+    "lat": "32.596811",
+    "lng": "35.100445"
+},
+  {
+    "city": "עין השלושה",
+    "count_in_unique_points_set": "1",
+    "lat": "31.351722",
+    "lng": "34.403471"
+},
+  {
+    "city": "עין זיוון",
+    "count_in_unique_points_set": "3",
+    "lat": "33.09645",
+    "lng": "35.796313"
+},
+  {
+    "city": "עין יהב",
+    "count_in_unique_points_set": "1",
+    "lat": "30.6574941",
+    "lng": "35.2367899"
+},
+  {
+    "city": "עין יעקב",
+    "count_in_unique_points_set": "8",
+    "lat": "33.009312",
+    "lng": "35.229024"
+},
+  {
+    "city": "עין כמונים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.919813",
+    "lng": "35.431325"
+},
+  {
+    "city": "עין קנייא",
+    "count_in_unique_points_set": "21",
+    "lat": "33.2366802",
+    "lng": "35.7313062"
+},
+  {
+    "city": "עכו",
+    "count_in_unique_points_set": "15",
+    "lat": "32.933052",
+    "lng": "35.082678"
+},
+  {
+    "city": "עלמה",
+    "count_in_unique_points_set": "15",
+    "lat": "33.05186",
+    "lng": "35.499636"
+},
+  {
+    "city": "עמוקה",
+    "count_in_unique_points_set": "17",
+    "lat": "32.997669",
+    "lng": "35.524801"
+},
+  {
+    "city": "עמיעד",
+    "count_in_unique_points_set": "5",
+    "lat": "32.930354",
+    "lng": "35.54052100000001"
+},
+  {
+    "city": "עמיר",
+    "count_in_unique_points_set": "40",
+    "lat": "33.17772610000001",
+    "lng": "35.6198305"
+},
+  {
+    "city": "עמקה",
+    "count_in_unique_points_set": "3",
+    "lat": "32.977664",
+    "lng": "35.161807"
+},
+  {
+    "city": "עספיא",
+    "count_in_unique_points_set": "1",
+    "lat": "32.720737",
+    "lng": "35.059087"
+},
+  {
+    "city": "ערב אל עראמשה",
+    "count_in_unique_points_set": "45",
+    "lat": "33.088834",
+    "lng": "35.228839"
+},
+  {
+    "city": "ערערה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.496323",
+    "lng": "35.097292"
+},
+  {
+    "city": "עתלית",
+    "count_in_unique_points_set": "1",
+    "lat": "32.6960656",
+    "lng": "34.9458283"
+},
+  {
+    "city": "פוריידיס",
+    "count_in_unique_points_set": "1",
+    "lat": "32.597351",
+    "lng": "34.951899"
+},
+  {
+    "city": "פסוטה",
+    "count_in_unique_points_set": "14",
+    "lat": "33.04782",
+    "lng": "35.308827"
+},
+  {
+    "city": "פקיעין",
+    "count_in_unique_points_set": "8",
+    "lat": "32.9787353",
+    "lng": "35.33336329999999"
+},
+  {
+    "city": "פקיעין החדשה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.982195",
+    "lng": "35.323408"
+},
+  {
+    "city": "פרוד",
+    "count_in_unique_points_set": "1",
+    "lat": "32.933066",
+    "lng": "35.434318"
+},
+  {
+    "city": "צבעון",
+    "count_in_unique_points_set": "6",
+    "lat": "33.026363",
+    "lng": "35.416723"
+},
+  {
+    "city": "צוריאל",
+    "count_in_unique_points_set": "8",
+    "lat": "33.006488",
+    "lng": "35.31479"
+},
+  {
+    "city": "צורית גילון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.904338",
+    "lng": "35.232191"
+},
+  {
+    "city": "צפון",
+    "count_in_unique_points_set": "22",
+    "lat": "32.8972246",
+    "lng": "35.3027226"
+},
+  {
+    "city": "צפת",
+    "count_in_unique_points_set": "8",
+    "lat": "32.964648",
+    "lng": "35.495997"
+},
+  {
+    "city": "קדיתא",
+    "count_in_unique_points_set": "4",
+    "lat": "33.005954",
+    "lng": "35.468309"
+},
+  {
+    "city": "קדמת צבי",
+    "count_in_unique_points_set": "6",
+    "lat": "33.029485",
+    "lng": "35.69774400000001"
+},
+  {
+    "city": "קיבוץ דן",
+    "count_in_unique_points_set": "66",
+    "lat": "33.239637",
+    "lng": "35.653953"
+},
+  {
+    "city": "קלע",
+    "count_in_unique_points_set": "32",
+    "lat": "33.131601",
+    "lng": "35.69039"
+},
+  {
+    "city": "קצרין",
+    "count_in_unique_points_set": "8",
+    "lat": "32.990998",
+    "lng": "35.689865"
+},
+  {
+    "city": "קריית אתא",
+    "count_in_unique_points_set": "7",
+    "lat": "32.809144",
+    "lng": "35.119773"
+},
+  {
+    "city": "קריית ביאליק",
+    "count_in_unique_points_set": "9",
+    "lat": "32.8408396",
+    "lng": "35.0916456"
+},
+  {
+    "city": "קריית חיים ושמואל",
+    "count_in_unique_points_set": "7",
+    "lat": "32.8340986",
+    "lng": "35.0667691"
+},
+  {
+    "city": "קריית ים",
+    "count_in_unique_points_set": "8",
+    "lat": "32.851004",
+    "lng": "35.070244"
+},
+  {
+    "city": "קריית מוצקין",
+    "count_in_unique_points_set": "8",
+    "lat": "32.8390366",
+    "lng": "35.0821062"
+},
+  {
+    "city": "קריית שמונה",
+    "count_in_unique_points_set": "111",
+    "lat": "33.20809",
+    "lng": "35.5699622"
+},
+  {
+    "city": "קשת",
+    "count_in_unique_points_set": "4",
+    "lat": "32.9800",
+    "lng": "35.8086"
+},
+  {
+    "city": "ראמה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.9374389",
+    "lng": "35.366515"
+},
+  {
+    "city": "ראש הנקרה",
+    "count_in_unique_points_set": "35",
+    "lat": "33.08609",
+    "lng": "35.113455"
+},
+  {
+    "city": "ראש פינה",
+    "count_in_unique_points_set": "4",
+    "lat": "32.9690188",
+    "lng": "35.5428591"
+},
+  {
+    "city": "רגבה",
+    "count_in_unique_points_set": "15",
+    "lat": "32.977493",
+    "lng": "35.099129"
+},
+  {
+    "city": "רוויה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.448638",
+    "lng": "35.473118"
+},
+  {
+    "city": "רחוב",
+    "count_in_unique_points_set": "1",
+    "lat": "32.451099",
+    "lng": "35.489598"
+},
+  {
+    "city": "ריחאנייה",
+    "count_in_unique_points_set": "19",
+    "lat": "33.049922",
+    "lng": "35.487062"
+},
+  {
+    "city": "רכסים",
+    "count_in_unique_points_set": "5",
+    "lat": "32.749265",
+    "lng": "35.099581"
+},
+  {
+    "city": "רמות",
+    "count_in_unique_points_set": "88",
+    "lat": "32.8506",
+    "lng": "35.6667"
+},
+  {
+    "city": "רמות נפתלי",
+    "count_in_unique_points_set": "87",
+    "lat": "33.102354",
+    "lng": "35.553313"
+},
+  {
+    "city": "רמת דוד",
+    "count_in_unique_points_set": "1",
+    "lat": "32.678991",
+    "lng": "35.20403599999999"
+},
+  {
+    "city": "רמת הנדיב",
+    "count_in_unique_points_set": "1",
+    "lat": "32.5524324",
+    "lng": "34.9453"
+},
+  {
+    "city": "רמת השופט",
+    "count_in_unique_points_set": "1",
+    "lat": "32.609356",
+    "lng": "35.094079"
+},
+  {
+    "city": "רמת השרון",
+    "count_in_unique_points_set": "1",
+    "lat": "32.137793",
+    "lng": "34.840278"
+},
+  {
+    "city": "רמת יוחנן",
+    "count_in_unique_points_set": "2",
+    "lat": "32.793457",
+    "lng": "35.122208"
+},
+  {
+    "city": "רמת מגשימים",
+    "count_in_unique_points_set": "10",
+    "lat": "32.84406600000001",
+    "lng": "35.80658"
+},
+  {
+    "city": "רפטינג נהר הירדן",
+    "count_in_unique_points_set": "3",
+    "lat": "32.46708430667223",
+    "lng": "35.56573872483355"
+},
+  {
+    "city": "רשפים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.481235",
+    "lng": "35.47879"
+},
+  {
+    "city": "שאר ישוב",
+    "count_in_unique_points_set": "70",
+    "lat": "33.2263492",
+    "lng": "35.6468357"
+},
+  {
+    "city": "שבי ציון",
+    "count_in_unique_points_set": "18",
+    "lat": "32.982079",
+    "lng": "35.083005"
+},
+  {
+    "city": "שדה אליהו",
+    "count_in_unique_points_set": "1",
+    "lat": "32.441882",
+    "lng": "35.513803"
+},
+  {
+    "city": "שדה אליעזר",
+    "count_in_unique_points_set": "18",
+    "lat": "33.04647",
+    "lng": "35.56525"
+},
+  {
+    "city": "שדה נחום",
+    "count_in_unique_points_set": "1",
+    "lat": "32.525068",
+    "lng": "35.480855"
+},
+  {
+    "city": "שדה נחמיה",
+    "count_in_unique_points_set": "41",
+    "lat": "33.188234",
+    "lng": "35.62307"
+},
+  {
+    "city": "שדי תרומות",
+    "count_in_unique_points_set": "1",
+    "lat": "32.440898",
+    "lng": "35.484204"
+},
+  {
+    "city": "שדמות מחולה",
+    "count_in_unique_points_set": "1",
+    "lat": "32.347731",
+    "lng": "35.530587"
+},
+  {
+    "city": "שדרות",
+    "count_in_unique_points_set": "3",
+    "lat": "31.52269399999999",
+    "lng": "34.595581"
+},
+  {
+    "city": "שומרה",
+    "count_in_unique_points_set": "14",
+    "lat": "33.08247",
+    "lng": "35.28196200000001"
+},
+  {
+    "city": "שומרת",
+    "count_in_unique_points_set": "13",
+    "lat": "32.95148",
+    "lng": "35.094955"
+},
+  {
+    "city": "שייח' דנון",
+    "count_in_unique_points_set": "4",
+    "lat": "32.9938295",
+    "lng": "35.14856839999999"
+},
+  {
+    "city": "שלוחות",
+    "count_in_unique_points_set": "1",
+    "lat": "32.472608",
+    "lng": "35.480488"
+},
+  {
+    "city": "שלומי",
+    "count_in_unique_points_set": "47",
+    "lat": "33.072609",
+    "lng": "35.145945"
+},
+  {
+    "city": "שלפים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.481235",
+    "lng": "35.47879"
+},
+  {
+    "city": "שמיר",
+    "count_in_unique_points_set": "41",
+    "lat": "33.166754",
+    "lng": "35.659949"
+},
+  {
+    "city": "שניר",
+    "count_in_unique_points_set": "64",
+    "lat": "33.2399583",
+    "lng": "35.677592812"
+},
+  {
+    "city": "שעל",
+    "count_in_unique_points_set": "33",
+    "lat": "33.11653",
+    "lng": "35.718816"
+},
+  {
+    "city": "שער העמקים",
+    "count_in_unique_points_set": "3",
+    "lat": "32.722621",
+    "lng": "35.110601"
+},
+  {
+    "city": "שער מנשה",
+    "count_in_unique_points_set": "2",
+    "lat": "32.4438777",
+    "lng": "35.0109759"
+},
+  {
+    "city": "שפר",
+    "count_in_unique_points_set": "2",
+    "lat": "32.944553",
+    "lng": "35.437848"
+},
+  {
+    "city": "שפרעם",
+    "count_in_unique_points_set": "1",
+    "lat": "32.8035805",
+    "lng": "35.1732997"
+},
+  {
+    "city": "שתולה",
+    "count_in_unique_points_set": "10",
+    "lat": "33.085919",
+    "lng": "35.315627"
+},
+  {
+    "city": "תל חי",
+    "count_in_unique_points_set": "102",
+    "lat": "33.209499",
+    "lng": "35.570177"
+},
+  {
+    "city": "תל קציר",
+    "count_in_unique_points_set": "1",
+    "lat": "32.706396",
+    "lng": "35.61786"
+},
+  {
+    "city": "תל תאומים",
+    "count_in_unique_points_set": "1",
+    "lat": "32.442537",
+    "lng": "35.496409"
+},
+  {
+    "city": "תלמי אלעזר",
+    "count_in_unique_points_set": "1",
+    "lat": "32.447228",
+    "lng": "34.974991"
+},
+  {
+    "city": "תקומה",
+    "count_in_unique_points_set": "1",
+    "lat": "31.448536",
+    "lng": "34.578085"
+},
+  {
+    "city": "תקומה וחוות יזרעם",
+    "count_in_unique_points_set": "1",
+    "lat": "31.448536",
+    "lng": "34.578085"
+}
+]
