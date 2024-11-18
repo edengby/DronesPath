@@ -1,0 +1,2159 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Starting Cities Map</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Load Leaflet from CDN -->
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""
+      />
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+      <!-- Custom CSS for marker styling -->
+      <style>
+        #map { height: 100vh; position: relative; }
+
+        .custom-div-icon {
+          position: relative;
+        }
+
+        .marker-pin {
+          width: 30px;
+          height: 42px;
+          border-radius: 15px 15px 15px 0;
+          transform: rotate(-45deg);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -15px;
+          margin-top: -42px;
+        }
+
+        .icon-number {
+          position: absolute;
+          top: -15px;
+          left: -10px;
+          width: 50px;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          color: #fff;
+        }
+
+        .info.legend {
+          background: white;
+          padding: 6px 8px;
+          font: 14px Arial, sans-serif;
+          box-shadow: 0 0 15px rgba(0,0,0,0.2);
+          border-radius: 5px;
+        }
+
+        .info.legend i {
+          width: 18px;
+          height: 18px;
+          float: left;
+          margin-right: 8px;
+          opacity: 0.7;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="map"></div>
+      <script>
+        var map = L.map('map').setView([31.5, 34.75], 7);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors',
+        }).addTo(map);
+
+        // Function to determine marker color based on count
+        
+    function getColor(value, min, max) {
+      if (min === max) {
+        // Avoid division by zero; assign a default color
+        return 'rgb(0, 0, 139)'; // DarkBlue
+      }
+
+      // Normalize the value between 0 and 1
+      var ratio = (value - min) / (max - min);
+      // Clamp the ratio between 0 and 1
+      ratio = Math.max(0, Math.min(1, ratio));
+
+      // Define color gradient from light blue to dark blue
+      var startColor = [0, 161, 255]; // LightBlue
+      var endColor = [0, 0, 139]; // DarkBlue
+
+      var r = Math.round(startColor[0] + ratio * (endColor[0] - startColor[0]));
+      var g = Math.round(startColor[1] + ratio * (endColor[1] - startColor[1]));
+      var b = Math.round(startColor[2] + ratio * (endColor[2] - startColor[2]));
+
+      return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    }
+  
+
+        
+      // Custom icon for תקומה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (תקומה)
+      L.marker([31.448536, 34.578085], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>תקומה</b><br>Average Distance: 0.86 km<br>Longest Distance: 0.86 km<br>Times as Starting City: 1");
+    
+      // Custom icon for גברעם
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גברעם)
+      L.marker([31.591461, 34.612156], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גברעם</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מטווח ניר עם
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מטווח ניר עם)
+      L.marker([31.5123126, 34.5545017], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מטווח ניר עם</b><br>Average Distance: 1.31 km<br>Longest Distance: 1.31 km<br>Times as Starting City: 1");
+    
+      // Custom icon for איבים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (איבים)
+      L.marker([31.533597, 34.609697], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>איבים</b><br>Average Distance: 4.07 km<br>Longest Distance: 5.74 km<br>Times as Starting City: 3");
+    
+      // Custom icon for ניר עוז
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ניר עוז)
+      L.marker([31.309697, 34.402075], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ניר עוז</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for אביבים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 108, 217);\"></div><span class=\"icon-number\">28</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אביבים)
+      L.marker([33.089381, 35.470338], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אביבים</b><br>Average Distance: 6.82 km<br>Longest Distance: 18.86 km<br>Times as Starting City: 28");
+    
+      // Custom icon for צפת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (צפת)
+      L.marker([32.964648, 35.495997], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>צפת</b><br>Average Distance: 51.99 km<br>Longest Distance: 51.99 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מטולה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 0, 139);\"></div><span class=\"icon-number\">83</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מטולה)
+      L.marker([33.277232, 35.578235], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מטולה</b><br>Average Distance: 13.38 km<br>Longest Distance: 63.60 km<br>Times as Starting City: 83");
+    
+      // Custom icon for מנחמיה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מנחמיה)
+      L.marker([32.66318529999999, 35.555195], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מנחמיה</b><br>Average Distance: 51.23 km<br>Longest Distance: 97.77 km<br>Times as Starting City: 2");
+    
+      // Custom icon for רם און
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (רם און)
+      L.marker([32.528742, 35.258657], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>רם און</b><br>Average Distance: 22.66 km<br>Longest Distance: 22.66 km<br>Times as Starting City: 1");
+    
+      // Custom icon for דישון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (דישון)
+      L.marker([33.082318, 35.517572], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>דישון</b><br>Average Distance: 16.27 km<br>Longest Distance: 65.10 km<br>Times as Starting City: 4");
+    
+      // Custom icon for קריית ים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קריית ים)
+      L.marker([32.851004, 35.070244], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קריית ים</b><br>Average Distance: 105.80 km<br>Longest Distance: 201.76 km<br>Times as Starting City: 2");
+    
+      // Custom icon for נחל עוז
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נחל עוז)
+      L.marker([31.47267999999999, 34.497675], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נחל עוז</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 3");
+    
+      // Custom icon for בני נצרים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בני נצרים)
+      L.marker([31.143513, 34.316403], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בני נצרים</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אעבלין
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אעבלין)
+      L.marker([32.8213416, 35.195795], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אעבלין</b><br>Average Distance: 2.88 km<br>Longest Distance: 2.88 km<br>Times as Starting City: 1");
+    
+      // Custom icon for גורנות הגליל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גורנות הגליל)
+      L.marker([33.059286, 35.24967], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גורנות הגליל</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עין הבשור
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין הבשור)
+      L.marker([31.280895, 34.443446], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין הבשור</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for כפר סאלד
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 124, 228);\"></div><span class=\"icon-number\">20</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר סאלד)
+      L.marker([33.196035, 35.657993], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר סאלד</b><br>Average Distance: 15.70 km<br>Longest Distance: 29.85 km<br>Times as Starting City: 20");
+    
+      // Custom icon for כברי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 147, 245);\"></div><span class=\"icon-number\">8</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כברי)
+      L.marker([33.020985, 35.147007], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כברי</b><br>Average Distance: 5.45 km<br>Longest Distance: 7.76 km<br>Times as Starting City: 8");
+    
+      // Custom icon for ארז
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ארז)
+      L.marker([31.55984, 34.564889], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ארז</b><br>Average Distance: 3.57 km<br>Longest Distance: 3.57 km<br>Times as Starting City: 1");
+    
+      // Custom icon for ע'ג'ר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 77, 194);\"></div><span class=\"icon-number\">44</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ע'ג'ר)
+      L.marker([33.272607, 35.623637], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ע'ג'ר</b><br>Average Distance: 7.85 km<br>Longest Distance: 34.82 km<br>Times as Starting City: 44");
+    
+      // Custom icon for עלמה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 139, 239);\"></div><span class=\"icon-number\">12</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עלמה)
+      L.marker([33.05186, 35.499636], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עלמה</b><br>Average Distance: 10.26 km<br>Longest Distance: 33.05 km<br>Times as Starting City: 12");
+    
+      // Custom icon for ראש הנקרה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 88, 203);\"></div><span class=\"icon-number\">38</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ראש הנקרה)
+      L.marker([33.08609, 35.113455], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ראש הנקרה</b><br>Average Distance: 13.43 km<br>Longest Distance: 30.80 km<br>Times as Starting City: 38");
+    
+      // Custom icon for דוב''ב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 143, 242);\"></div><span class=\"icon-number\">10</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (דוב''ב)
+      L.marker([33.0508, 35.407747], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>דוב''ב</b><br>Average Distance: 5.61 km<br>Longest Distance: 11.43 km<br>Times as Starting City: 10");
+    
+      // Custom icon for חניתה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 90, 204);\"></div><span class=\"icon-number\">37</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חניתה)
+      L.marker([33.087634, 35.17343], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חניתה</b><br>Average Distance: 7.88 km<br>Longest Distance: 15.63 km<br>Times as Starting City: 37");
+    
+      // Custom icon for אילת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אילת)
+      L.marker([29.557669, 34.951925], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אילת</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 4");
+    
+      // Custom icon for אזור תעשייה שחורת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 149, 247);\"></div><span class=\"icon-number\">7</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אזור תעשייה שחורת)
+      L.marker([29.597881, 34.9718911], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אזור תעשייה שחורת</b><br>Average Distance: 4.87 km<br>Longest Distance: 4.87 km<br>Times as Starting City: 7");
+    
+      // Custom icon for יפתח
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 29, 160);\"></div><span class=\"icon-number\">68</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יפתח)
+      L.marker([33.128346, 35.55202999999999], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יפתח</b><br>Average Distance: 16.39 km<br>Longest Distance: 17.72 km<br>Times as Starting City: 68");
+    
+      // Custom icon for הילה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (הילה)
+      L.marker([33.036175, 35.244582], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>הילה</b><br>Average Distance: 7.58 km<br>Longest Distance: 9.49 km<br>Times as Starting City: 3");
+    
+      // Custom icon for נטועה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 145, 244);\"></div><span class=\"icon-number\">9</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נטועה)
+      L.marker([33.065387, 35.323406], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נטועה</b><br>Average Distance: 5.73 km<br>Longest Distance: 9.72 km<br>Times as Starting City: 9");
+    
+      // Custom icon for שתולה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 153, 249);\"></div><span class=\"icon-number\">5</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שתולה)
+      L.marker([33.085919, 35.315627], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שתולה</b><br>Average Distance: 5.30 km<br>Longest Distance: 13.86 km<br>Times as Starting City: 5");
+    
+      // Custom icon for חולתה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 143, 242);\"></div><span class=\"icon-number\">10</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חולתה)
+      L.marker([33.052851, 35.609244], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חולתה</b><br>Average Distance: 15.51 km<br>Longest Distance: 65.26 km<br>Times as Starting City: 10");
+    
+      // Custom icon for מג'דל שמס
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 128, 231);\"></div><span class=\"icon-number\">18</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מג'דל שמס)
+      L.marker([33.2690961, 35.772122], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מג'דל שמס</b><br>Average Distance: 12.24 km<br>Longest Distance: 66.58 km<br>Times as Starting City: 18");
+    
+      // Custom icon for שניר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 106, 215);\"></div><span class=\"icon-number\">29</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שניר)
+      L.marker([33.2399583, 35.677592812], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שניר</b><br>Average Distance: 12.48 km<br>Longest Distance: 13.40 km<br>Times as Starting City: 29");
+    
+      // Custom icon for ברעם
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ברעם)
+      L.marker([33.058979, 35.433235], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ברעם</b><br>Average Distance: 10.24 km<br>Longest Distance: 17.95 km<br>Times as Starting City: 2");
+    
+      // Custom icon for קשת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קשת)
+      L.marker([32.98, 35.8086], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קשת</b><br>Average Distance: 2.33 km<br>Longest Distance: 4.65 km<br>Times as Starting City: 2");
+    
+      // Custom icon for קצרין - אזור תעשייה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קצרין - אזור תעשייה)
+      L.marker([32.990998, 35.689865], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קצרין - אזור תעשייה</b><br>Average Distance: 5.57 km<br>Longest Distance: 11.14 km<br>Times as Starting City: 2");
+    
+      // Custom icon for זרעית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (זרעית)
+      L.marker([33.09898500000001, 35.288522], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>זרעית</b><br>Average Distance: 5.21 km<br>Longest Distance: 8.01 km<br>Times as Starting City: 3");
+    
+      // Custom icon for עין גב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין גב)
+      L.marker([32.783393, 35.640119], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין גב</b><br>Average Distance: 10.59 km<br>Longest Distance: 11.36 km<br>Times as Starting City: 2");
+    
+      // Custom icon for ביריה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 149, 247);\"></div><span class=\"icon-number\">7</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ביריה)
+      L.marker([32.978108, 35.503096], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ביריה</b><br>Average Distance: 1.17 km<br>Longest Distance: 1.64 km<br>Times as Starting City: 7");
+    
+      // Custom icon for קדיתא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קדיתא)
+      L.marker([33.005954, 35.468309], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קדיתא</b><br>Average Distance: 8.85 km<br>Longest Distance: 14.30 km<br>Times as Starting City: 2");
+    
+      // Custom icon for קדמת צבי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 145, 244);\"></div><span class=\"icon-number\">9</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קדמת צבי)
+      L.marker([33.029485, 35.69774400000001], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קדמת צבי</b><br>Average Distance: 13.64 km<br>Longest Distance: 63.74 km<br>Times as Starting City: 9");
+    
+      // Custom icon for צבעון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (צבעון)
+      L.marker([33.026363, 35.416723], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>צבעון</b><br>Average Distance: 9.76 km<br>Longest Distance: 9.76 km<br>Times as Starting City: 2");
+    
+      // Custom icon for בית ג'אן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בית ג'אן)
+      L.marker([32.9651552, 35.37935360000001], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בית ג'אן</b><br>Average Distance: 6.47 km<br>Longest Distance: 6.47 km<br>Times as Starting City: 1");
+    
+      // Custom icon for בוקעתא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 151, 248);\"></div><span class=\"icon-number\">6</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בוקעתא)
+      L.marker([33.2026572, 35.7767723], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בוקעתא</b><br>Average Distance: 8.39 km<br>Longest Distance: 11.27 km<br>Times as Starting City: 6");
+    
+      // Custom icon for קלע
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 126, 230);\"></div><span class=\"icon-number\">19</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קלע)
+      L.marker([33.131601, 35.69039], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קלע</b><br>Average Distance: 4.12 km<br>Longest Distance: 15.63 km<br>Times as Starting City: 19");
+    
+      // Custom icon for רמת מגשימים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 141, 241);\"></div><span class=\"icon-number\">11</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (רמת מגשימים)
+      L.marker([32.84406600000001, 35.80658], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>רמת מגשימים</b><br>Average Distance: 22.73 km<br>Longest Distance: 54.67 km<br>Times as Starting City: 11");
+    
+      // Custom icon for גדות
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גדות)
+      L.marker([33.018208, 35.619547], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גדות</b><br>Average Distance: 17.02 km<br>Longest Distance: 17.02 km<br>Times as Starting City: 3");
+    
+      // Custom icon for עבדון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 149, 247);\"></div><span class=\"icon-number\">7</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עבדון)
+      L.marker([33.048792, 35.179128], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עבדון</b><br>Average Distance: 5.71 km<br>Longest Distance: 12.51 km<br>Times as Starting City: 7");
+    
+      // Custom icon for כושי רמון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כושי רמון)
+      L.marker([30.306825, 35.13523142], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כושי רמון</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for ערב אל עראמשה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 147, 245);\"></div><span class=\"icon-number\">8</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ערב אל עראמשה)
+      L.marker([33.088834, 35.228839], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ערב אל עראמשה</b><br>Average Distance: 8.34 km<br>Longest Distance: 26.13 km<br>Times as Starting City: 8");
+    
+      // Custom icon for מזרעה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מזרעה)
+      L.marker([32.983652, 35.098934], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מזרעה</b><br>Average Distance: 2.34 km<br>Longest Distance: 2.34 km<br>Times as Starting City: 2");
+    
+      // Custom icon for שייח' דנון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שייח' דנון)
+      L.marker([32.9938295, 35.14856839999999], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שייח' דנון</b><br>Average Distance: 15.21 km<br>Longest Distance: 19.94 km<br>Times as Starting City: 3");
+    
+      // Custom icon for כפר נהר הירדן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר נהר הירדן)
+      L.marker([32.768294, 35.435627], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר נהר הירדן</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מנות
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מנות)
+      L.marker([33.038709, 35.195156], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מנות</b><br>Average Distance: 12.21 km<br>Longest Distance: 12.21 km<br>Times as Starting City: 1");
+    
+      // Custom icon for גשר הזיו
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 137, 238);\"></div><span class=\"icon-number\">13</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גשר הזיו)
+      L.marker([33.040532, 35.110563], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גשר הזיו</b><br>Average Distance: 12.13 km<br>Longest Distance: 24.39 km<br>Times as Starting City: 13");
+    
+      // Custom icon for נאות מרדכי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 149, 247);\"></div><span class=\"icon-number\">7</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נאות מרדכי)
+      L.marker([33.159785, 35.595602], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נאות מרדכי</b><br>Average Distance: 7.11 km<br>Longest Distance: 12.44 km<br>Times as Starting City: 7");
+    
+      // Custom icon for חספין
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חספין)
+      L.marker([32.8456305, 35.7929907], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חספין</b><br>Average Distance: 1.28 km<br>Longest Distance: 1.28 km<br>Times as Starting City: 2");
+    
+      // Custom icon for חמת גדר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חמת גדר)
+      L.marker([32.6833586, 35.6647332], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חמת גדר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 3");
+    
+      // Custom icon for נהריה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 141, 241);\"></div><span class=\"icon-number\">11</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נהריה)
+      L.marker([33.0085361, 35.0980514], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נהריה</b><br>Average Distance: 5.61 km<br>Longest Distance: 13.98 km<br>Times as Starting City: 11");
+    
+      // Custom icon for שעל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שעל)
+      L.marker([33.11653, 35.718816], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שעל</b><br>Average Distance: 3.44 km<br>Longest Distance: 13.76 km<br>Times as Starting City: 4");
+    
+      // Custom icon for מרום גולן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 145, 244);\"></div><span class=\"icon-number\">9</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מרום גולן)
+      L.marker([33.132583, 35.77707100000001], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מרום גולן</b><br>Average Distance: 4.89 km<br>Longest Distance: 11.38 km<br>Times as Starting City: 9");
+    
+      // Custom icon for מלכיה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 153, 249);\"></div><span class=\"icon-number\">5</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מלכיה)
+      L.marker([33.098589, 35.509624], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מלכיה</b><br>Average Distance: 3.03 km<br>Longest Distance: 9.31 km<br>Times as Starting City: 5");
+    
+      // Custom icon for ניר יצחק
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ניר יצחק)
+      L.marker([31.23604, 34.356702], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ניר יצחק</b><br>Average Distance: 2.86 km<br>Longest Distance: 2.86 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עין השלושה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין השלושה)
+      L.marker([31.351722, 34.403471], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין השלושה</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for רמות נפתלי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 149, 247);\"></div><span class=\"icon-number\">7</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (רמות נפתלי)
+      L.marker([33.102354, 35.553313], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>רמות נפתלי</b><br>Average Distance: 10.81 km<br>Longest Distance: 15.59 km<br>Times as Starting City: 7");
+    
+      // Custom icon for אזור תעשייה אכזיב מילואות
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אזור תעשייה אכזיב מילואות)
+      L.marker([33.068374, 35.110211], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אזור תעשייה אכזיב מילואות</b><br>Average Distance: 9.48 km<br>Longest Distance: 9.48 km<br>Times as Starting City: 1");
+    
+      // Custom icon for שאר ישוב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שאר ישוב)
+      L.marker([33.2263492, 35.6468357], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שאר ישוב</b><br>Average Distance: 10.14 km<br>Longest Distance: 15.99 km<br>Times as Starting City: 3");
+    
+      // Custom icon for איילת השחר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 139, 239);\"></div><span class=\"icon-number\">12</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (איילת השחר)
+      L.marker([33.021115, 35.576732], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>איילת השחר</b><br>Average Distance: 2.49 km<br>Longest Distance: 16.81 km<br>Times as Starting City: 12");
+    
+      // Custom icon for קיבוץ דן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קיבוץ דן)
+      L.marker([33.239637, 35.653953], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קיבוץ דן</b><br>Average Distance: 7.19 km<br>Longest Distance: 14.96 km<br>Times as Starting City: 3");
+    
+      // Custom icon for עברון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עברון)
+      L.marker([32.991149, 35.100031], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עברון</b><br>Average Distance: 3.18 km<br>Longest Distance: 3.18 km<br>Times as Starting City: 1");
+    
+      // Custom icon for רגבה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (רגבה)
+      L.marker([32.977493, 35.099129], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>רגבה</b><br>Average Distance: 1.66 km<br>Longest Distance: 1.66 km<br>Times as Starting City: 1");
+    
+      // Custom icon for כפר יובל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 153, 249);\"></div><span class=\"icon-number\">5</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר יובל)
+      L.marker([33.246577, 35.597063], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר יובל</b><br>Average Distance: 2.71 km<br>Longest Distance: 4.97 km<br>Times as Starting City: 5");
+    
+      // Custom icon for כפר בלום
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר בלום)
+      L.marker([33.172527, 35.607938], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר בלום</b><br>Average Distance: 0.61 km<br>Longest Distance: 1.82 km<br>Times as Starting City: 3");
+    
+      // Custom icon for בית הלל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בית הלל)
+      L.marker([33.208782, 35.606515], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בית הלל</b><br>Average Distance: 1.22 km<br>Longest Distance: 3.67 km<br>Times as Starting City: 3");
+    
+      // Custom icon for להבות הבשן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (להבות הבשן)
+      L.marker([33.1412178, 35.6478714], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>להבות הבשן</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for עמוקה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עמוקה)
+      L.marker([32.997669, 35.524801], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עמוקה</b><br>Average Distance: 2.60 km<br>Longest Distance: 2.60 km<br>Times as Starting City: 1");
+    
+      // Custom icon for הגושרים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (הגושרים)
+      L.marker([33.221485, 35.623028], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>הגושרים</b><br>Average Distance: 16.68 km<br>Longest Distance: 54.33 km<br>Times as Starting City: 4");
+    
+      // Custom icon for מעיין ברוך
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מעיין ברוך)
+      L.marker([33.239349, 35.609359], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מעיין ברוך</b><br>Average Distance: 5.17 km<br>Longest Distance: 13.27 km<br>Times as Starting City: 4");
+    
+      // Custom icon for שלומי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 137, 238);\"></div><span class=\"icon-number\">13</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שלומי)
+      L.marker([33.072609, 35.145945], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שלומי</b><br>Average Distance: 9.16 km<br>Longest Distance: 34.71 km<br>Times as Starting City: 13");
+    
+      // Custom icon for צוריאל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (צוריאל)
+      L.marker([33.006488, 35.31479], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>צוריאל</b><br>Average Distance: 14.32 km<br>Longest Distance: 14.32 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מסעדה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מסעדה)
+      L.marker([33.2321159, 35.7555991], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מסעדה</b><br>Average Distance: 14.53 km<br>Longest Distance: 15.75 km<br>Times as Starting City: 2");
+    
+      // Custom icon for קריית שמונה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קריית שמונה)
+      L.marker([33.20809, 35.5699622], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קריית שמונה</b><br>Average Distance: 0.70 km<br>Longest Distance: 2.82 km<br>Times as Starting City: 4");
+    
+      // Custom icon for כפר גלעדי
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר גלעדי)
+      L.marker([33.242078, 35.574142], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר גלעדי</b><br>Average Distance: 1.90 km<br>Longest Distance: 3.80 km<br>Times as Starting City: 2");
+    
+      // Custom icon for כרם בן זמרה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כרם בן זמרה)
+      L.marker([33.039224, 35.46988899999999], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כרם בן זמרה</b><br>Average Distance: 14.91 km<br>Longest Distance: 14.91 km<br>Times as Starting City: 1");
+    
+      // Custom icon for שומרת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שומרת)
+      L.marker([32.95148, 35.094955], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שומרת</b><br>Average Distance: 2.35 km<br>Longest Distance: 2.35 km<br>Times as Starting City: 1");
+    
+      // Custom icon for דפנה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (דפנה)
+      L.marker([33.23075, 35.638268], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>דפנה</b><br>Average Distance: 1.75 km<br>Longest Distance: 1.75 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אזור תעשייה חצור הגלילית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אזור תעשייה חצור הגלילית)
+      L.marker([32.980382, 35.543548], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אזור תעשייה חצור הגלילית</b><br>Average Distance: 5.29 km<br>Longest Distance: 9.31 km<br>Times as Starting City: 2");
+    
+      // Custom icon for פסוטה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (פסוטה)
+      L.marker([33.04782, 35.308827], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>פסוטה</b><br>Average Distance: 5.44 km<br>Longest Distance: 5.44 km<br>Times as Starting City: 1");
+    
+      // Custom icon for נווה אטי''ב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נווה אטי''ב)
+      L.marker([33.26202, 35.740574], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נווה אטי''ב</b><br>Average Distance: 3.61 km<br>Longest Distance: 3.61 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אודם
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אודם)
+      L.marker([33.1933716, 35.7495651], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אודם</b><br>Average Distance: 8.59 km<br>Longest Distance: 18.55 km<br>Times as Starting City: 3");
+    
+      // Custom icon for כפר הנשיא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר הנשיא)
+      L.marker([32.97466, 35.602308], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר הנשיא</b><br>Average Distance: 6.89 km<br>Longest Distance: 6.89 km<br>Times as Starting City: 1");
+    
+      // Custom icon for יערה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יערה)
+      L.marker([33.068013, 35.18608], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יערה</b><br>Average Distance: 0.97 km<br>Longest Distance: 2.90 km<br>Times as Starting City: 3");
+    
+      // Custom icon for משגב עם
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (משגב עם)
+      L.marker([33.247572, 35.548499], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>משגב עם</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 3");
+    
+      // Custom icon for כיסופים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כיסופים)
+      L.marker([31.374545, 34.398992], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כיסופים</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for שדה אליעזר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שדה אליעזר)
+      L.marker([33.04647, 35.56525], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שדה אליעזר</b><br>Average Distance: 6.52 km<br>Longest Distance: 8.93 km<br>Times as Starting City: 3");
+    
+      // Custom icon for עין קנייא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין קנייא)
+      L.marker([33.2366802, 35.7313062], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין קנייא</b><br>Average Distance: 13.41 km<br>Longest Distance: 13.41 km<br>Times as Starting City: 1");
+    
+      // Custom icon for שמיר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שמיר)
+      L.marker([33.166754, 35.659949], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שמיר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for יסוד המעלה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יסוד המעלה)
+      L.marker([33.05358, 35.589013], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יסוד המעלה</b><br>Average Distance: 1.90 km<br>Longest Distance: 3.79 km<br>Times as Starting City: 2");
+    
+      // Custom icon for שבי ציון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שבי ציון)
+      L.marker([32.982079, 35.083005], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שבי ציון</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עמיעד
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עמיעד)
+      L.marker([32.930354, 35.54052100000001], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עמיעד</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for לב החולה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 153, 249);\"></div><span class=\"icon-number\">5</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (לב החולה)
+      L.marker([33.103333, 35.609167], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>לב החולה</b><br>Average Distance: 15.68 km<br>Longest Distance: 19.60 km<br>Times as Starting City: 5");
+    
+      // Custom icon for צפת - עיר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (צפת - עיר)
+      L.marker([32.964648, 35.495997], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>צפת - עיר</b><br>Average Distance: 8.45 km<br>Longest Distance: 8.45 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מרגליות
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 153, 249);\"></div><span class=\"icon-number\">5</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מרגליות)
+      L.marker([33.216474, 35.544354], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מרגליות</b><br>Average Distance: 2.01 km<br>Longest Distance: 2.56 km<br>Times as Starting City: 5");
+    
+      // Custom icon for רפטינג נהר הירדן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (רפטינג נהר הירדן)
+      L.marker([32.46708430667223, 35.56573872483355], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>רפטינג נהר הירדן</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for כרכום
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כרכום)
+      L.marker([32.928271, 35.606331], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כרכום</b><br>Average Distance: 17.08 km<br>Longest Distance: 17.08 km<br>Times as Starting City: 1");
+    
+      // Custom icon for לימן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 145, 244);\"></div><span class=\"icon-number\">9</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (לימן)
+      L.marker([33.058732, 35.111815], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>לימן</b><br>Average Distance: 25.32 km<br>Longest Distance: 55.93 km<br>Times as Starting City: 9");
+    
+      // Custom icon for ספסופה - כפר חושן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ספסופה - כפר חושן)
+      L.marker([33.013123, 35.440171], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ספסופה - כפר חושן</b><br>Average Distance: 3.11 km<br>Longest Distance: 3.11 km<br>Times as Starting City: 1");
+    
+      // Custom icon for באר אורה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (באר אורה)
+      L.marker([29.710166, 34.987218], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>באר אורה</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for בני יהודה וגבעת יואב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בני יהודה וגבעת יואב)
+      L.marker([32.798262, 35.69107], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בני יהודה וגבעת יואב</b><br>Average Distance: 44.25 km<br>Longest Distance: 44.25 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מנרה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מנרה)
+      L.marker([33.195375, 35.543728], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מנרה</b><br>Average Distance: 23.78 km<br>Longest Distance: 23.78 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מיצר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מיצר)
+      L.marker([32.4605, 35.4413], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מיצר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 3");
+    
+      // Custom icon for גשר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גשר)
+      L.marker([32.621205, 35.550376], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גשר</b><br>Average Distance: 12.03 km<br>Longest Distance: 24.06 km<br>Times as Starting City: 2");
+    
+      // Custom icon for מצובה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מצובה)
+      L.marker([33.062312, 35.155705], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מצובה</b><br>Average Distance: 8.76 km<br>Longest Distance: 8.76 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עתלית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עתלית)
+      L.marker([32.6960656, 34.9458283], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עתלית</b><br>Average Distance: 2.23 km<br>Longest Distance: 2.23 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מגדים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מגדים)
+      L.marker([32.7266265, 34.9621003], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מגדים</b><br>Average Distance: 5.93 km<br>Longest Distance: 5.93 km<br>Times as Starting City: 1");
+    
+      // Custom icon for ספיר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ספיר)
+      L.marker([30.613623, 35.184144], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ספיר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for אלי עד
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אלי עד)
+      L.marker([32.806583, 35.73657499999999], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אלי עד</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for טבריה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (טבריה)
+      L.marker([32.795859, 35.530973], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>טבריה</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for בת ים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בת ים)
+      L.marker([32.0151439, 34.752885], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בת ים</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אדמית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 157, 252);\"></div><span class=\"icon-number\">3</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אדמית)
+      L.marker([33.078842, 35.20951], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אדמית</b><br>Average Distance: 0.83 km<br>Longest Distance: 2.49 km<br>Times as Starting City: 3");
+    
+      // Custom icon for ראשון לציון - מערב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ראשון לציון - מערב)
+      L.marker([31.95908129999999, 34.8020886], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ראשון לציון - מערב</b><br>Average Distance: 9.45 km<br>Longest Distance: 9.45 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מחניים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מחניים)
+      L.marker([32.988845, 35.570375], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מחניים</b><br>Average Distance: 7.08 km<br>Longest Distance: 7.08 km<br>Times as Starting City: 1");
+    
+      // Custom icon for באר גנים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (באר גנים)
+      L.marker([31.7003539, 34.610934], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>באר גנים</b><br>Average Distance: 3.78 km<br>Longest Distance: 3.78 km<br>Times as Starting City: 1");
+    
+      // Custom icon for כפר שמריהו
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר שמריהו)
+      L.marker([32.187123, 34.823124], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר שמריהו</b><br>Average Distance: 7.06 km<br>Longest Distance: 7.06 km<br>Times as Starting City: 1");
+    
+      // Custom icon for סער
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 155, 251);\"></div><span class=\"icon-number\">4</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (סער)
+      L.marker([33.028689, 35.109232], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>סער</b><br>Average Distance: 6.46 km<br>Longest Distance: 16.27 km<br>Times as Starting City: 4");
+    
+      // Custom icon for פקיעין
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (פקיעין)
+      L.marker([32.9787353, 35.33336329999999], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>פקיעין</b><br>Average Distance: 4.55 km<br>Longest Distance: 4.55 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עין יהב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין יהב)
+      L.marker([30.6574941, 35.2367899], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין יהב</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for הר הנגב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (הר הנגב)
+      L.marker([30.502778, 34.639167], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>הר הנגב</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אילות
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אילות)
+      L.marker([29.580548, 34.963023], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אילות</b><br>Average Distance: 2.76 km<br>Longest Distance: 2.76 km<br>Times as Starting City: 1");
+    
+      // Custom icon for גן יאשיה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גן יאשיה)
+      L.marker([32.349487, 34.996245], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גן יאשיה</b><br>Average Distance: 3.38 km<br>Longest Distance: 3.38 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אזור תעשייה שער נעמן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אזור תעשייה שער נעמן)
+      L.marker([32.893398, 35.091562], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אזור תעשייה שער נעמן</b><br>Average Distance: 16.04 km<br>Longest Distance: 16.04 km<br>Times as Starting City: 1");
+    
+      // Custom icon for יראון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יראון)
+      L.marker([33.077239, 35.454291], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יראון</b><br>Average Distance: 9.13 km<br>Longest Distance: 13.01 km<br>Times as Starting City: 2");
+    
+      // Custom icon for חוף בצת
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חוף בצת)
+      L.marker([33.0805118, 35.105903], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חוף בצת</b><br>Average Distance: 22.00 km<br>Longest Distance: 22.00 km<br>Times as Starting City: 2");
+    
+      // Custom icon for הדר ועיר תחתית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (הדר ועיר תחתית)
+      L.marker([32.817137, 35.001788], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>הדר ועיר תחתית</b><br>Average Distance: 2.81 km<br>Longest Distance: 2.81 km<br>Times as Starting City: 2");
+    
+      // Custom icon for טמרה בגלבוע
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (טמרה בגלבוע)
+      L.marker([32.634918, 35.402699], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>טמרה בגלבוע</b><br>Average Distance: 184.18 km<br>Longest Distance: 184.18 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מחולה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מחולה)
+      L.marker([32.365285, 35.51602], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מחולה</b><br>Average Distance: 2.38 km<br>Longest Distance: 2.38 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עין זיוון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין זיוון)
+      L.marker([33.09645, 35.796313], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין זיוון</b><br>Average Distance: 3.69 km<br>Longest Distance: 3.69 km<br>Times as Starting City: 1");
+    
+      // Custom icon for יגור
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יגור)
+      L.marker([32.741532, 35.076826], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יגור</b><br>Average Distance: 6.69 km<br>Longest Distance: 6.69 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אורנים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אורנים)
+      L.marker([32.711224, 35.109579], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אורנים</b><br>Average Distance: 10.66 km<br>Longest Distance: 10.66 km<br>Times as Starting City: 1");
+    
+      // Custom icon for יקנעם עילית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (יקנעם עילית)
+      L.marker([32.660225, 35.104606], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>יקנעם עילית</b><br>Average Distance: 7.06 km<br>Longest Distance: 7.06 km<br>Times as Starting City: 1");
+    
+      // Custom icon for בת שלמה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בת שלמה)
+      L.marker([32.600335, 35.003837], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בת שלמה</b><br>Average Distance: 19.40 km<br>Longest Distance: 19.40 km<br>Times as Starting City: 1");
+    
+      // Custom icon for חוף אמנון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חוף אמנון)
+      L.marker([32.8911709, 35.5934816], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חוף אמנון</b><br>Average Distance: 4.57 km<br>Longest Distance: 4.57 km<br>Times as Starting City: 1");
+    
+      // Custom icon for עין יעקב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (עין יעקב)
+      L.marker([33.009312, 35.229024], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>עין יעקב</b><br>Average Distance: 1.64 km<br>Longest Distance: 1.64 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אלמגור
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אלמגור)
+      L.marker([32.912709, 35.60231], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אלמגור</b><br>Average Distance: 2.53 km<br>Longest Distance: 2.53 km<br>Times as Starting City: 1");
+    
+      // Custom icon for ג'דידה מכר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (ג'דידה מכר)
+      L.marker([32.928656, 35.150573], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>ג'דידה מכר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אשקלון - דרום
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אשקלון - דרום)
+      L.marker([31.6687885, 34.5742523], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אשקלון - דרום</b><br>Average Distance: 4.38 km<br>Longest Distance: 4.38 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אשקלון - צפון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אשקלון - צפון)
+      L.marker([31.6687885, 34.5742523], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אשקלון - צפון</b><br>Average Distance: 2.30 km<br>Longest Distance: 2.30 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אזור תעשייה יקנעם עילית
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 159, 254);\"></div><span class=\"icon-number\">2</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אזור תעשייה יקנעם עילית)
+      L.marker([32.6682165, 35.106361], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אזור תעשייה יקנעם עילית</b><br>Average Distance: 11.91 km<br>Longest Distance: 21.98 km<br>Times as Starting City: 2");
+    
+      // Custom icon for אליקים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אליקים)
+      L.marker([32.633345, 35.067613], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אליקים</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for תלמי אלעזר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (תלמי אלעזר)
+      L.marker([32.447228, 34.974991], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>תלמי אלעזר</b><br>Average Distance: 3.40 km<br>Longest Distance: 3.40 km<br>Times as Starting City: 1");
+    
+      // Custom icon for גן שמואל
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (גן שמואל)
+      L.marker([32.452911, 34.949311], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>גן שמואל</b><br>Average Distance: 39.37 km<br>Longest Distance: 39.37 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אפק
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אפק)
+      L.marker([32.838316, 35.12778], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אפק</b><br>Average Distance: 4.20 km<br>Longest Distance: 4.20 km<br>Times as Starting City: 1");
+    
+      // Custom icon for קריית אתא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (קריית אתא)
+      L.marker([32.809144, 35.119773], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>קריית אתא</b><br>Average Distance: 15.04 km<br>Longest Distance: 15.04 km<br>Times as Starting City: 1");
+    
+      // Custom icon for כפר מנדא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר מנדא)
+      L.marker([32.809649, 35.2624051], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר מנדא</b><br>Average Distance: 7.07 km<br>Longest Distance: 7.07 km<br>Times as Starting City: 1");
+    
+      // Custom icon for חיפה - מפרץ
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חיפה - מפרץ)
+      L.marker([32.823058, 35.0239], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חיפה - מפרץ</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for כפר יהושע
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (כפר יהושע)
+      L.marker([32.680966, 35.1515478], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>כפר יהושע</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מצדה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מצדה)
+      L.marker([31.31088, 35.363052], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מצדה</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אליפז ומכרות תמנע
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אליפז ומכרות תמנע)
+      L.marker([29.79624799999999, 35.012094], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אליפז ומכרות תמנע</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for שדמות מחולה
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (שדמות מחולה)
+      L.marker([32.347731, 35.530587], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>שדמות מחולה</b><br>Average Distance: 4.23 km<br>Longest Distance: 4.23 km<br>Times as Starting City: 1");
+    
+      // Custom icon for נחשולים
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (נחשולים)
+      L.marker([32.61309, 34.92225], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>נחשולים</b><br>Average Distance: 3.28 km<br>Longest Distance: 3.28 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אל רום
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אל רום)
+      L.marker([33.180519, 35.770095], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אל רום</b><br>Average Distance: 9.70 km<br>Longest Distance: 9.70 km<br>Times as Starting City: 1");
+    
+      // Custom icon for תל אביב - מרכז העיר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (תל אביב - מרכז העיר)
+      L.marker([32.07849, 34.773982], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>תל אביב - מרכז העיר</b><br>Average Distance: 13.54 km<br>Longest Distance: 13.54 km<br>Times as Starting City: 1");
+    
+      // Custom icon for חיפה - מערב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (חיפה - מערב)
+      L.marker([32.7940463, 34.989571], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>חיפה - מערב</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for בית עלמין תל רגב
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בית עלמין תל רגב)
+      L.marker([32.7672379, 35.1243861], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בית עלמין תל רגב</b><br>Average Distance: 15.81 km<br>Longest Distance: 15.81 km<br>Times as Starting City: 1");
+    
+      // Custom icon for מצפה רמון
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (מצפה רמון)
+      L.marker([30.6094096, 34.8011766], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>מצפה רמון</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for אור עקיבא
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (אור עקיבא)
+      L.marker([32.5103476, 34.919546], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>אור עקיבא</b><br>Average Distance: 3.16 km<br>Longest Distance: 3.16 km<br>Times as Starting City: 1");
+    
+      // Custom icon for תל קציר
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (תל קציר)
+      L.marker([32.706396, 35.61786], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>תל קציר</b><br>Average Distance: 0.00 km<br>Longest Distance: 0.00 km<br>Times as Starting City: 1");
+    
+      // Custom icon for בית חנן
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: "<div class=\"marker-pin\" style=\"background-color: rgb(0, 161, 255);\"></div><span class=\"icon-number\">1</span>",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42]
+      });
+
+      // Marker for Starting City (בית חנן)
+      L.marker([31.935211, 34.775596], {icon: customIcon}).addTo(map)
+        .bindPopup("<b>בית חנן</b><br>Average Distance: 7.68 km<br>Longest Distance: 7.68 km<br>Times as Starting City: 1");
+    
+
+        
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'info legend');
+      var grades = [1, 42.00, 83];
+      var labels = [];
+
+      div.innerHTML += '<b>Times as Starting City</b><br>';
+
+      for (var i = 0; i < grades.length; i++) {
+        var from = grades[i];
+        var to = grades[i + 1];
+
+        // Get color for the current grade
+        var color = getColor(from, minCount, maxCount);
+
+        div.innerHTML +=
+          '<i style="background:' + color + '"></i> ' +
+          from + (to ? '&ndash;' + to + '<br>' : '+');
+      }
+
+      return div;
+    };
+
+    legend.addTo(map);
+  
+      </script>
+    </body>
+    </html>
+  
