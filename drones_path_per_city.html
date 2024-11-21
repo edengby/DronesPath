@@ -35,11 +35,11 @@
         // Function to create markers
         cityMarkersData.forEach(function(cityData) {
             var marker = L.circleMarker([cityData.lat, cityData.lng], {
-                radius: 10, // Increased radius for larger bubbles
+                radius: 15, // Increased radius for larger bubbles
                 color: 'blue',
                 fillColor: 'blue',
                 fillOpacity: 0.7, // Increased opacity for better visibility
-                weight: 2 // Increased border weight
+                weight: 5 // Increased border weight
             }).addTo(map);
 
             marker.bindPopup('<b>' + cityData.city + '</b><br>Click to see drone paths.');
